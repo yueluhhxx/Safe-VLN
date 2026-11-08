@@ -1,0 +1,11 @@
+# Fourth overlay: storage cadence only; preserve perf_v3_selected evaluation.
+# All 41 checkpoints are retained. No best-only deletion is authorized here.
+IL:
+  iters: 20000
+  log_every: 200
+  checkpoint_start_iter: 12000
+  checkpoint_end_iter: 20000
+  checkpoint_interval: 200
+  load_from_ckpt: False
+  is_requeue: False
+  benchmark_timing: False

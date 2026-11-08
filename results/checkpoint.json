@@ -1,0 +1,12 @@
+{
+  "filename": "ckpt.iter12800.pth",
+  "iteration": 12800,
+  "format": "PyTorch tensor state_dict + iteration; evaluation/fine-tuning only",
+  "sha256": "679012e80677f548c61e534809b416906e30cd933982ccc984514c44f28a1453",
+  "size_bytes": 945159739,
+  "source_checkpoint_sha256": "6f7726aeeb33f46220abf16563b32cd1fe0bab0b16c1358828525819db08bdb7",
+  "tensor_count": 771,
+  "tensor_values_and_dtypes_verified_equal": true,
+  "optimizer_included": false,
+  "machine_configuration_included": false
+}

@@ -1,0 +1,52 @@
+# Overlay for run_r2r/iter_train.yaml.  Pass both files, in this order:
+#   --exp-config run_r2r/iter_train.yaml,run_r2r/iter_train_8gpu.yaml
+# Keeping this as an overlay lets algorithm-specific options remain in the
+# primary experiment config while fixing the reproducible 8-GPU run contract.
+
+TRAINER_NAME: SS-ETP-Managed
+SIMULATOR_GPU_IDS: [0, 1, 2, 3, 4, 5, 6, 7]
+TORCH_GPU_ID: 0
+TORCH_GPU_IDS: [0, 1, 2, 3, 4, 5, 6, 7]
+GPU_NUMBERS: 8
+NUM_ENVIRONMENTS: 2
+
+MODEL:
+  pretrained_path: data/pretrained/ETP/mlm.sap_r2r/ckpts/model_step_82500.pt
+  SAFE_VLN:
+    ENABLED: True
+    # User-requested coefficient; the Safe-VLN paper reports 1e-4.
+    DELTA: 1.0e-5
+    # Sim2Sim-VLNCE's 2D laser mounting height.
+    SENSOR_HEIGHT: 0.24
+
+EVAL:
+  SPLIT: val_unseen
+  EPISODE_COUNT: -1
+  SAVE_RESULTS: True
+  fast_eval: False
+
+IL:
+  iters: 20000
+  log_every: 2000
+  lr: 1.0e-5
+  batch_size: 2
+  waypoint_aug: True
+  back_algo: teleport
+  tryout: True
+  reselection: True
+  reselection_max_retries: 1
+  load_from_ckpt: False
+  is_requeue: False
+  # V3: preserve global 16 environments and the released two-rank loss weighting.
+  gradient_reference_groups: 2
+  sampling_schedule: per_iteration
+  teacher_position_mode: random_representative
+  # Performance claims require the isolated fixed-checkpoint comparison.
+  controller_motion_mode: etpnav_distance
+  ghost_route_mode: shortest_path
+
+TASK_CONFIG:
+  SEED: 0
+  SIMULATOR:
+    HABITAT_SIM_V0:
+      ALLOW_SLIDING: True

@@ -1,0 +1,50 @@
+# Install PyTorch/torchvision first using docs/INSTALL.md.
+# Habitat-Lab and CLIP are installed from pinned upstream commits separately.
+# These are the runtime packages relevant to this repository, not a dump of
+# the shared development machine's unrelated LLM and web-application packages.
+numpy==1.23.5
+numpy-quaternion==2023.0.2
+scipy==1.10.1
+numba==0.58.1
+llvmlite==0.41.1
+gym==0.17.3
+pyglet==1.5.0
+cloudpickle==1.6.0
+yacs==0.1.8
+attrs==23.2.0
+opencv-python==4.8.1.78
+Pillow==10.0.1
+matplotlib==3.7.4
+scikit-image==0.21.0
+networkx==3.1
+imageio==2.33.1
+imageio-ffmpeg==0.4.9
+moviepy==2.0.0.dev2
+ifcfg==0.24
+jsonlines==4.0.0
+lmdb==1.4.1
+msgpack==1.0.7
+msgpack-numpy==0.4.8
+dtw==1.4.0
+fastdtw==0.3.4
+pytorch-transformers==1.2.0
+transformers==4.42.4
+tokenizers==0.19.1
+huggingface-hub==0.30.2
+fsspec==2023.9.2
+safetensors==0.5.3
+sentencepiece==0.1.99
+sacremoses==0.1.1
+boto3==1.37.38
+botocore==1.37.38
+requests==2.31.0
+urllib3==1.26.20
+ftfy==6.2.0
+regex==2023.10.3
+packaging==23.2
+tqdm==4.66.1
+PyYAML==6.0.1
+six==1.16.0
+tensorboard==2.13.0
+tensorflow==2.13.0
+typing_extensions==4.5.0

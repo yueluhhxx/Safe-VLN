@@ -1,0 +1,19 @@
+name: safe-vln
+channels:
+  - aihabitat
+  - conda-forge
+  - defaults
+dependencies:
+  # Legacy Linux x86_64 research stack. See docs/INSTALL.md before installing.
+  - python=3.8
+  - pip=23.3.1
+  - setuptools=68.2.2
+  - wheel=0.41.2
+  - numpy=1.23.5
+  - scipy=1.10.1
+  - numba=0.58.1
+  - quaternion=2023.0.2
+  - tk=8.6.12
+  - ffmpeg=4.2.2
+  - habitat-sim=0.1.7=py3.8_headless_linux_856d4b08c1a2632626bf0d205bf46471a99502b7
+  - habitat-sim-mutex=1.0=headless_nobullet

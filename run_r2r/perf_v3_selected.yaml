@@ -1,0 +1,13 @@
+# Apply after iter_train.yaml and iter_train_8gpu.yaml.
+# Selected on all 1839 val_unseen episodes using frozen iter16000 weights:
+# controller_ablation/iter16000_motion_route_20261106/summary.json.
+# SR=1076/1839=58.5101%, SPL=46.7597%; this is validation-set selection,
+# not a held-out test result or evidence of gains from the training-only fixes.
+# Keep the original ablation inputs unchanged for reproducibility.
+IL:
+  controller_motion_mode: etpnav_distance
+  ghost_route_mode: nearest_front
+  gradient_reference_groups: 2
+  sampling_schedule: per_iteration
+  teacher_position_mode: random_representative
+  benchmark_timing: False
