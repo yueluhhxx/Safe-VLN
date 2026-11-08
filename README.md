@@ -16,15 +16,6 @@ Safe-VLN combines occupancy-aware waypoint prediction with waypoint re-selection
 after collisions. The implementation builds on [ETPNav](https://github.com/MarSaKi/ETPNav)
 and follows the planar depth-sensing setup in [Sim2Sim-VLNCE](https://github.com/jacobkrantz/Sim2Sim-VLNCE).
 
-## Results
-
-| Dataset | Checkpoint | Episodes | SR ↑ | SPL ↑ | nDTW ↑ | NE ↓ |
-|---|---|---:|---:|---:|---:|---:|
-| R2R-CE val-unseen | iter12800 | 1839 | **60.25** | **48.45** | **59.59** | **4.45** |
-
-SR, SPL and nDTW are percentages; NE is in metres.
-[All checkpoint results](results/ranking.csv) · [Model download and SHA256](docs/CHECKPOINTS.md)
-
 ## Installation
 
 ```bash
@@ -90,15 +81,6 @@ python scripts/run_experiment.py train \
 Training runs for **20,000 iterations**. Checkpoints from iteration **12,000 to
 20,000** are saved every **200 iterations** in
 `outputs/train/checkpoints/safe_vln_train/`; all 41 checkpoints are retained.
-
-| Setting | Value |
-|---|---|
-| Learning rate | `1e-5` |
-| Global environments | `16` |
-| Mixed precision | Enabled |
-| Occupancy coefficient | `1e-5` |
-| Planar sensor height | `0.24 m` |
-| Sliding / Tryout / re-selection | Enabled |
 
 ## Evaluation
 
