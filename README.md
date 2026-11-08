@@ -84,8 +84,11 @@ Training runs for **20,000 iterations**. Checkpoints from iteration **12,000 to
 
 ## Evaluation
 
-Download `ckpt.iter12800.pth` from [Aliyun Drive](https://www.alipan.com/s/VAvCoGBxhDJ)
-to `data/checkpoints/` (no extraction code required), then run:
+Download [Safe-VLN-iter12800.zip](https://github.com/yueluhhxx/Safe-VLN/releases/download/checkpoint-iter12800/Safe-VLN-iter12800.zip),
+extract it, and place `ckpt.iter12800.pth` in `data/checkpoints/`.
+An [Aliyun Drive mirror](https://www.aliyundrive.com/t/HlRhz8xSxnX11rjTMVpb)
+is also available until **2026-11-09 22:41 (UTC+8)**, with no extraction code.
+Then run:
 
 ```bash
 python scripts/run_experiment.py eval \
