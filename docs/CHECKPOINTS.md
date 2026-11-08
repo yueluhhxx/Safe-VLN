@@ -2,10 +2,11 @@
 
 | Model | File | R2R-CE val-unseen SR | SPL | nDTW | Download |
 |---|---|---:|---:|---:|---|
-| Safe-VLN, iter12800 | `ckpt.iter12800.pth` | 60.25 | 48.45 | 59.59 | Aliyun Drive link pending |
+| Safe-VLN, iter12800 | `ckpt.iter12800.pth` | 60.25 | 48.45 | 59.59 | [Aliyun Drive](https://www.alipan.com/s/VAvCoGBxhDJ) |
 
-The Aliyun Drive share URL and extraction code will be added after upload.
-There is no public download URL yet.
+Download the checkpoint from the shared folder. No extraction code is required;
+the share link is set to never expire. The folder also contains the SHA256 file,
+model metadata and a short README.
 
 ## File verification
 

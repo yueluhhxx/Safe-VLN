@@ -84,7 +84,8 @@ Training runs for **20,000 iterations**. Checkpoints from iteration **12,000 to
 
 ## Evaluation
 
-Download `ckpt.iter12800.pth` to `data/checkpoints/`, then run:
+Download `ckpt.iter12800.pth` from [Aliyun Drive](https://www.alipan.com/s/VAvCoGBxhDJ)
+to `data/checkpoints/` (no extraction code required), then run:
 
 ```bash
 python scripts/run_experiment.py eval \
